@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --white: gainsboro;
+  --brown1: #35302ccc;
+}
+
+body {
+  font-family: "Pathway Extreme", sans-serif;
+  margin: 0;
+}
+@media (max-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+.container {
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.landing {
+  height: 100vh;
+  background-image: url(imgs/pexels-meruyert-gonullu-7698870.jpg);
+  background-size: cover;
+  position: relative;
+}
+.landing::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(000 000 000 / 70%);
+}
+.landing .intro {
+  position: absolute;
+  transform: translatex(-50%);
+  left: 50%;
+  margin: auto;
+  z-index: 100;
+  padding: 10px;
+  text-align: center;
+}
+.intro p:first-child {
+  padding: 30px 30px 0;
+  font-size: 25px;
+  border-radius: 10px;
+  transition: 0.3s;
+  color: var(--white);
+  margin: 0;
+  font-weight: bold;
+  border: 1px solid transparent;
+}
+.intro p:nth-child(2) {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--white);
+  text-align: center;
+  border-radius: 8px;
+  transition: 0.3s;
+  padding: 25px;
+  margin: 0;
+}
+.intro p:last-of-type {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--white);
+  text-align: center;
+  border-radius: 8px;
+  transition: 0.3s;
+  padding: 20px;
+  margin-top: -15px;
+}
+
+.intro a {
+  color: var(--white);
+  background-color: var(--brown1);
+  border: 1px solid var(--white);
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid white;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+.intro a:hover {
+  margin-left: 20px;
+  color: var(--brown1);
+  background-color: white;
+  border-color: var(--brown1);
+}
+@media (max-width: 768px) {
+  .landing .intro {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  .landing .intro p:first-child {
+    font-size: 18px;
+  }
+  .landing .intro p:nth-child(2) {
+    font-size: 13px;
+    margin-bottom: 0px;
+  }
+  .landing .intro p:last-of-type {
+    font-size: 15px;
+  }
+}
+.landing .Countdown {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  margin: auto;
+  z-index: 100;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.landing .Countdown p {
+  color: var(--white);
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 35px;
+  font-style: italic;
+  display: block;
+  text-align: center;
+}
+.landing .Countdown .spans {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.landing .Countdown .spans span {
+  border: 1px solid white;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  padding: 15px;
+  margin: 5px;
+  background-color: var(--brown1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+.landing .Countdown .spans span:hover {
+  color: var(--brown1);
+  background-color: white;
+  border: 1px solid var(--brown1);
+}
+@media (max-width: 768px) {
+  .landing .Countdown p {
+    font-size: 16px;
+    margin: 30px 0px;
+  }
+  .landing .Countdown .spans {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .landing .Countdown .spans span {
+    padding: 10px;
+    margin: 2px;
+  }
+}
